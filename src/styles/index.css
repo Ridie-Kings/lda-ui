@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* Estilos base para los componentes LDA UI */
+:root {
+  /* Variables de color que coincidan con tu configuración de Tailwind */
+  --lda-primary: #dc2626; /* red-600 */
+  --lda-primary-high: #991b1b; /* red-800 */
+  --lda-content-inverse: #ffffff;
+  --lda-content-high: #111827; /* gray-900 */
+  --lda-background-base: #ffffff;
+}
+@import 'tailwindcss';
+
+:root {
+	@apply font-family-sans;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src:
+		url('../assets/CircularStd-Medium.woff2') format('woff2'),
+		url('../assets/CircularStd-Book.woff2') format('woff'),
+		url('../assets/CircularStd-Bold.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@theme {
+	/* Font Family */
+	--font-family-sans: 'Circular Std', system-ui, sans-serif;
+
+	/* Light Mode Colors */
+	--color-light-content-high: #1a1a1a;
+	--color-light-content-mid: #1a1a1aa6;
+	--color-light-content-low: #1a1a1a4d;
+	--color-light-content-inverse: #ffffff;
+
+	--color-light-border-high: #1a1a1a;
+	--color-light-border-mid: #1a1a1a4d;
+	--color-light-border-low: #1a1a1a1f;
+
+	--color-light-background-high: #1a1a1a;
+	--color-light-background-base: #ffffff;
+	--color-light-background-mid: #1a1a1a1f;
+	--color-light-background-alt: #f7f7f7;
+	--color-light-background-low: #1a1a1a0a;
+	--color-light-background-overlay: #1a1a1a40;
+
+	--color-light-primary-high: #cc3333;
+	--color-light-primary-hover: #d04242;
+	--color-light-primary-active: #af2c2c;
+	--color-light-primary-low: #f8e3e3;
+
+	--color-light-secondary-high: #225050;
+	--color-light-secondary-low: #d8ebe6;
+
+	--color-light-positive-high: #007d1b;
+	--color-light-positive-low: #e8f5e6;
+
+	--color-light-negative-mid: #e51919;
+	--color-light-negative-low: #fff0f0;
+
+	--color-light-warning-low: #984000;
+	--color-light-warning-shadow: #ffede0;
+
+	--color-light-info-low: #ecafb8;
+
+	/* Dark Mode Colors */
+	--color-dark-content-high: #ffffff;
+	--color-dark-content-mid: #ffffffb2;
+	--color-dark-content-low: #ffffff59;
+	--color-dark-content-inverse: #1a1a1a;
+
+	--color-dark-border-high: #ffffff;
+	--color-dark-border-mid: #ffffff59;
+	--color-dark-border-low: #ffffff26;
+
+	--color-dark-background-high: #ffffff;
+	--color-dark-background-base: #1a1a1a;
+	--color-dark-background-mid: #ffffff26;
+	--color-dark-background-alt: #1f1f1f;
+	--color-dark-background-low: #ffffff0d;
+	--color-dark-background-overlay: #ffffff40;
+
+	--color-dark-primary-high: #cc3333;
+	--color-dark-primary-hover: #d04242;
+	--color-dark-primary-active: #af2c2c;
+	--color-dark-primary-low: #f3c0cf;
+
+	--color-dark-secondary-high: #225050;
+	--color-dark-secondary-low: #0da294;
+
+	--color-dark-positive-high: #52cb6c;
+	--color-dark-positive-low: #1b3616;
+
+	--color-dark-negative-mid: #ed505d;
+	--color-dark-negative-low: #450b08;
+
+	--color-dark-warning-low: #984000;
+	--color-dark-warning-shadow: #ffede0;
+
+	--color-dark-info-low: #ecafb8;
+
+	/* Border Radius */
+	--radius-xl: 1rem;
+	--radius-2xl: 1.5rem;
+}
