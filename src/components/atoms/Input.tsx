@@ -5,7 +5,7 @@ export default function Input({
 	error,
 	className = '',
 	inputClassName = '',
-	type = 'text', // Soporte por defecto para type="text"
+	type = 'text',
 	...props
 }: InputProps) {
 	return (
