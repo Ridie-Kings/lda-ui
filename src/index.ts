@@ -8,6 +8,7 @@ export { Input } from './components/atoms/Input';
 export { Select } from './components/atoms/Select';
 export { TabButton } from './components/atoms/TabButton';
 export { TextArea } from './components/atoms/TextArea';
+export { Slider } from './components/atoms/Slider';
 export { Alert } from './components/molecules/Alert';
 
 // Exportar utilidades
