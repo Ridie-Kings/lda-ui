@@ -1,10 +1,12 @@
 import type { ButtonProps } from "../../interfaces/interfaces";
+import { cn } from "../../utils/cn";
 
 const variants = {
 	primary: 'bg-light-primary-high text-light-content-inverse hover:bg-red-700 focus:ring-red-500',
 	secondary: 'bg-black text-light-content-inverse hover:bg-gray-300 focus:ring-gray-400',
 	tertiary:
 		'bg-light-background-base border text-light-content-high hover:bg-gray-300 focus:ring-gray-500',
+	ghost: 'bg-light-background-base text-light-content-high hover:bg-red-300 focus:ring-red-500',
 };
 
 const sizes = {
@@ -13,7 +15,7 @@ const sizes = {
 	lg: 'px-6 py-3 text-base rounded-full',
 };
 
-export default function Button({
+export function Button({
 	text,
 	variant = 'primary',
 	size = 'md',
@@ -24,11 +26,11 @@ export default function Button({
 	icon,
 }: ButtonProps) {
 	const base =
-		'font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed hover:cursor-pointer';
-	const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
+		'font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed hover:cursor-pointer flex items-center justify-center gap-2';
+	
 	return (
 		<button
-			className={classes + 'flex items-center justify-center gap-2'}
+			className={cn(base, variants[variant], sizes[size], className)}
 			disabled={disabled}
 			type={type}
 			onClick={onClick}

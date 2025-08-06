@@ -43,12 +43,40 @@ import 'lda-ui/styles';
 import 'lda-ui/dist/styles/tailwind.css';
 ```
 
+## Utilidades
+
+### `cn` - Función para combinar clases CSS
+
+Utilidad para combinar clases CSS de manera inteligente, resolviendo conflictos de Tailwind CSS:
+
+```tsx
+import { cn } from 'lda-ui';
+
+// Uso básico
+const className = cn('bg-red-500', 'text-white', 'p-4');
+
+// Con condicionales
+const className = cn(
+  'base-class',
+  isActive && 'active-class',
+  { 'conditional-class': someCondition }
+);
+
+// Resuelve conflictos de Tailwind automáticamente
+const className = cn('bg-red-500', 'bg-blue-500'); // Resultado: 'bg-blue-500'
+```
+
 ## Componentes disponibles
 
 - `Button` - **Botón personalizable**. Props: `text`, `variant` (`primary`, `secondary`, `tertiary`), `size` (`sm`, `md`, `lg`), `onClick`, `icon`, `disabled`, `type`, `className`.
   - _Ejemplo:_
     ```tsx
     <Button text="Guardar" variant="primary" size="md" onClick={...} />
+    ```
+- `Alert` - **Componente de alerta para mostrar mensajes**. Props: `type` (`info`, `success`, `warning`, `error`), `label`, `text`, `showClose`, `onClose`, `className`.
+  - _Ejemplo:_
+    ```tsx
+    <Alert type="success" label="¡Éxito!" text="La operación se completó correctamente" showClose onClose={...} />
     ```
 - `Badge` - **Insignia para estados o conteos**. Props: `text`, `variant`, `size`, `className`, `children`.
   - _Ejemplo:_

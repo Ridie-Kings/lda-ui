@@ -9,7 +9,6 @@
   --lda-content-high: #111827; /* gray-900 */
   --lda-background-base: #ffffff;
 }
-@import 'tailwindcss';
 
 :root {
 	@apply font-family-sans;
@@ -17,16 +16,27 @@
 
 @font-face {
 	font-family: 'Circular Std';
-	src:
-		url('../assets/CircularStd-Medium.woff2') format('woff2'),
-		url('../assets/CircularStd-Book.woff2') format('woff'),
-		url('../assets/CircularStd-Bold.woff2') format('woff2');
+	src: url('../assets/CircularStd-Book.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Circular Std';
+	src: url('../assets/CircularStd-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: url('../assets/CircularStd-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
 @theme {
-	/* Font Family */
+	/* Font Family - restored with actual font files */
 	--font-family-sans: 'Circular Std', system-ui, sans-serif;
 
 	/* Light Mode Colors */

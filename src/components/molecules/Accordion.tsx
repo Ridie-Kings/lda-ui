@@ -1,10 +1,8 @@
 import { useState } from "react";
 import type { AccordionProps } from "../../interfaces/interfaces";
 import { Minus, Plus } from "lucide-react";
-import Button from "../atoms/Button";
+import {Button} from "../atoms/Button";
 import { TextArea } from "../..";
-
-
 
 export default function Accordion({ title, type, labelContent, textContent, textareaLabel, textareaPlaceholder, onButtonClick, buttonLabel, defaultOpen = false }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);

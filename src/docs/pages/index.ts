@@ -1,0 +1,13 @@
+export { default as AccordionDocs } from './AccordionDocs';
+export { default as AlertDocs } from './AlertDocs';
+export { default as BadgeDocs } from './BadgeDocs';
+export { default as ButtonDocs } from './ButtonDocs';
+export { default as CardDocs } from './CardDocs';
+export { default as FileInputDocs } from './FileInputDocs';
+export { default as IconDocs } from './IconDocs';
+export { default as InputDocs } from './InputDocs';
+export { default as IntroductionDocs } from './IntroductionDocs';
+export { default as SelectDocs } from './SelectDocs';
+export { default as TabButtonDocs } from './TabButtonDocs';
+export { default as TextAreaDocs } from './TextAreaDocs';
+export { default as SliderDocs } from './SliderDocs';

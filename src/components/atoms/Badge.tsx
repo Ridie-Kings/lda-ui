@@ -1,4 +1,5 @@
 import type { BadgeProps } from '../../interfaces/interfaces';
+import { cn } from '../../utils/cn';
 
 const variants = {
 	success: 'bg-green-100 text-green-800',
@@ -13,7 +14,7 @@ const sizes = {
 	md: 'px-3 py-1 text-sm',
 };
 
-export default function Badge({
+export function Badge({
 	text,
 	variant = 'neutral',
 	size = 'md',
@@ -21,9 +22,9 @@ export default function Badge({
 	children,
 }: BadgeProps) {
 	const base = 'inline-flex items-center font-medium rounded-full';
-	const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
+	
 	return (
-		<span className={classes}>
+		<span className={cn(base, variants[variant], sizes[size], className)}>
 			{text}
 			{children}
 		</span>

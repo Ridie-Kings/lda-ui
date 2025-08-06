@@ -1,25 +1,30 @@
 // Exportar todos los componentes
-export { default as Button } from './components/atoms/Button';
-export { default as Badge } from './components/atoms/Badge';
-export { default as Card } from './components/atoms/Card';
-export { default as FileInput } from './components/atoms/FileInput';
-export { default as Icon } from './components/atoms/Icon';
-export { default as Input } from './components/atoms/Input';
-export { default as Select } from './components/atoms/Select';
-export { default as TabButton } from './components/atoms/TabButton';
-export { default as TextArea } from './components/atoms/TextArea';
+export { Button } from './components/atoms/Button';
+export { Badge } from './components/atoms/Badge';
+export { InfoCard } from './components/atoms/Card';
+export { FileInput } from './components/atoms/FileInput';
+export { Icon } from './components/atoms/Icon';
+export { Input } from './components/atoms/Input';
+export { Select } from './components/atoms/Select';
+export { TabButton } from './components/atoms/TabButton';
+export { TextArea } from './components/atoms/TextArea';
+export { Alert } from './components/molecules/Alert';
+
+// Exportar utilidades
+export { cn } from './utils/cn';
 
 // Exportar interfaces/tipos
 export type {
   ButtonProps,
   BadgeProps,
-  CardProps,
+  InfoCardProps,
   FileInputProps,
   IconProps,
   InputProps,
   SelectProps,
   TabButtonProps,
-  TextareaProps
+  TextareaProps,
+  AlertProps
 } from './interfaces/interfaces';
 
 // Exportar estilos CSS

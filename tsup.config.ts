@@ -11,6 +11,13 @@ export default defineConfig({
   outDir: 'dist',
   loader: {
     '.css': 'copy',
+    '.woff': 'copy',
+    '.woff2': 'copy',
+    '.ttf': 'copy',
   },
   tsconfig: './tsconfig.app.json',
+  // Copy additional assets
+  onSuccess: async () => {
+    console.log('Build completed successfully');
+  },
 });

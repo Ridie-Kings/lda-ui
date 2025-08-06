@@ -1,6 +1,7 @@
 import type { TabButtonProps } from '../../interfaces/interfaces';
+import { cn } from '../../utils/cn';
 
-export default function TabButton({
+export function TabButton({
 	active = false,
 	children,
 	className = '',
@@ -12,7 +13,7 @@ export default function TabButton({
 		? 'bg-red-100 text-red-700 border-b-2 border-red-500'
 		: 'bg-gray-100 text-gray-600 border-b-2 border-transparent hover:bg-red-50 hover:text-red-700';
 	return (
-		<button className={`${base} ${activeClasses} ${className}`} {...props}>
+		<button className={cn(base, activeClasses, className)} {...props}>
 			{children}
 		</button>
 	);

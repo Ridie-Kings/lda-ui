@@ -1,4 +1,5 @@
 import type { IconProps } from "../../interfaces/interfaces";
+import { cn } from "../../utils/cn";
 
 const sizes = {
 	sm: 'w-4 h-4',
@@ -7,11 +8,10 @@ const sizes = {
 	xl: 'w-8 h-8',
 };
 
-export default function Icon({ size = 'md', color = 'currentColor', className = '' }: IconProps) {
-	const classes = `${sizes[size]} ${className}`;
+export function Icon({ size = 'md', color = 'currentColor', className = '' }: IconProps) {
 	return (
 		<svg
-			className={classes}
+			className={cn(sizes[size], className)}
 			fill="none"
 			stroke={color}
 			viewBox="0 0 24 24"

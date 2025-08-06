@@ -1,5 +1,5 @@
 export interface ButtonProps {
-	text: string;
+	text: string | undefined;
 	variant?: 'primary' | 'secondary' | 'tertiary';
 	size?: 'sm' | 'md' | 'lg';
 	disabled?: boolean;
@@ -25,9 +25,10 @@ const variants = {
 	neutral: 'bg-gray-100 text-gray-800',
 };
 
-export interface CardProps {
+export interface InfoCardProps {
 	title: string;
 	description: string;
+	className?: string;
 }
 
 export interface FileInputProps {
@@ -50,13 +51,16 @@ export interface InputProps {
 	error?: string;
 	className?: string;
 	inputClassName?: string;
-	type?: string; // Soporte para type="text" y otros
+	type?: string;
+	id?: string;
+	name?: string;
 }
 
 export interface SelectProps {
 	value: string;
 	onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 	options: { label: string; value: string }[];
+	className?: string;
 };
 
 export interface TabButtonProps {
@@ -71,4 +75,26 @@ export type TextareaProps = {
 	placeholder?: string;
 	label?: string;
 	disabled?: boolean;
+	className?: string;
+};
+
+export type AccordionProps = {
+  title: string;
+  type: "label" | "text" | "textarea";
+  labelContent?: string;
+  textContent?: string;
+  textareaLabel?: string;
+  textareaPlaceholder?: string;
+  onButtonClick?: () => void;
+  buttonLabel?: string;
+  defaultOpen?: boolean;
+};
+
+export type AlertProps = {
+  type?: "info" | "success" | "warning" | "error";
+  label?: string;
+  text?: string;
+  showClose?: boolean;
+  onClose?: () => void;
+  className?: string;
 };

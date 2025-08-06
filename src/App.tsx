@@ -1,34 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/index.css'
+import Sidebar from './docs/components/Sidebar'
+import ComponentDocs from './docs/components/ComponentDocs'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedComponent, setSelectedComponent] = useState<string>('introduction')
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex h-screen bg-gray-50">
+      <Sidebar 
+        selectedComponent={selectedComponent} 
+        onSelectComponent={setSelectedComponent} 
+      />
+      <div className="flex-1 overflow-auto">
+        <ComponentDocs selectedComponent={selectedComponent} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
