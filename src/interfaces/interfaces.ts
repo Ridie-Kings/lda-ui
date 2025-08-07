@@ -1,3 +1,11 @@
+export interface SwitchProps {
+  checked: boolean;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label?: string;
+  className?: string;
+  inputClassName?: string;
+  disabled?: boolean;
+}
 export interface ButtonProps {
 	text: string | undefined;
 	variant?: 'primary' | 'secondary' | 'tertiary';

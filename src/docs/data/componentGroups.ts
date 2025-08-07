@@ -63,6 +63,11 @@ export const componentGroups: ComponentGroup[] = [
         id: "slider",
         name: "Slider",
         description: "Control deslizante para seleccionar valores numéricos"
+      },
+      {
+        id: "switch",
+        name: "Switch",
+        description: "Interruptor para alternar entre dos estados"
       }
     ]
   },

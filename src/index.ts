@@ -9,6 +9,7 @@ export { Select } from './components/atoms/Select';
 export { TabButton } from './components/atoms/TabButton';
 export { TextArea } from './components/atoms/TextArea';
 export { Slider } from './components/atoms/Slider';
+export { Switch } from './components/atoms/Switch';
 export { Alert } from './components/molecules/Alert';
 
 // Exportar utilidades
@@ -25,7 +26,8 @@ export type {
   SelectProps,
   TabButtonProps,
   TextareaProps,
-  AlertProps
+  AlertProps,
+  SwitchProps
 } from './interfaces/interfaces';
 
 // Exportar estilos CSS

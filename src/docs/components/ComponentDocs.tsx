@@ -11,6 +11,7 @@ import TabButtonDocs from '../pages/TabButtonDocs'
 import AccordionDocs from '../pages/AccordionDocs'
 import AlertDocs from '../pages/AlertDocs'
 import SliderDocs from '../pages/SliderDocs'
+import SwitchDocs from '../pages/SwitchDocs'
 
 interface ComponentDocsProps {
   selectedComponent: string
@@ -41,6 +42,8 @@ export default function ComponentDocs({ selectedComponent }: ComponentDocsProps)
         return <TabButtonDocs />
       case 'slider':
         return <SliderDocs />
+      case 'switch':
+        return <SwitchDocs />
       case 'accordion':
         return <AccordionDocs />
       case 'alert':
