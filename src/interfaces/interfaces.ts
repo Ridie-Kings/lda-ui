@@ -57,11 +57,18 @@ export interface InputProps {
 }
 
 export interface SelectProps {
-	value: string;
-	onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-	options: { label: string; value: string }[];
-	className?: string;
-};
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  options: { label: string; value: string }[];
+  className?: string;
+  label?: string;
+  helperText?: string;
+  error?: string;
+  readOnly?: boolean;
+  labelTooltip?: string;
+  labelPanelTooltip?: string;
+  inputClassName?: string;
+}
 
 export interface TabButtonProps {
 	active?: boolean;
